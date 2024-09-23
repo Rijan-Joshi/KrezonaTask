@@ -1,12 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { cn } from "@/libs/utils";
 
 interface ButtonProps {
   primary?: boolean;
   theme?: "dark" | "light";
   size?: "small" | "medium" | "large";
   onClick?: () => void;
-  children: React.ReactNode;
+  children?: React.ReactNode;
+  className?: string;
 }
 
 const CustomButton: React.FC<ButtonProps> = ({
@@ -15,6 +17,7 @@ const CustomButton: React.FC<ButtonProps> = ({
   size = "medium",
   onClick,
   children,
+  className,
 }) => {
   const baseClasses =
     "font-semibold font-secondary rounded-md transition duration-300 ease-in-out focus:ring-2 focus:ring-offset-2";
@@ -32,7 +35,10 @@ const CustomButton: React.FC<ButtonProps> = ({
     <motion.button
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className={`${baseClasses} ${sizeClasses[size]} ${colorClasses}`}
+      className={cn(
+        `${baseClasses} ${sizeClasses[size]} ${colorClasses}`,
+        className
+      )}
       onClick={onClick}
     >
       {children}

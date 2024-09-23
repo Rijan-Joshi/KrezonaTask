@@ -5,6 +5,9 @@
 :root {
   --background: rgba(24, 25, 66, 1);
   --foreground: #171717;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @media (prefers-color-scheme: dark) {

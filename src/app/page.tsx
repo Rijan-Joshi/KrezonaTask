@@ -14,22 +14,23 @@ import Contact from "@/components/Contact";
 import Social from "@/components/Social";
 
 const Home = () => {
-  return;
-  <Wrapper>
-    <Hero />
-    <AboutUs />
-    <GamePortfolio />
-    <Features />
-    <CreationProcess />
-    <SomeNumbers />
-    <OurServices />
-    <GameEvents />
-    <Reviews />
-    <Awards />
-    <Blog />
-    <Contact />
-    <Social />
-  </Wrapper>;
+  return (
+    <Wrapper>
+      <Hero />
+      <AboutUs />
+      <GamePortfolio />
+      <Features />
+      <CreationProcess />
+      <SomeNumbers />
+      <OurServices />
+      <GameEvents />
+      <Reviews />
+      <Awards />
+      <Blog />
+      <Contact />
+      <Social />
+    </Wrapper>
+  );
 };
 
 export default Home;
