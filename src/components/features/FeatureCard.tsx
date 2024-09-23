@@ -22,7 +22,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
 }) => (
   <motion.div
     className={`relative bg-card w-270 h-224 rounded-lg mt-14 pt-14 px-10 pb-6 lg:p-4 lg:pt-6 flex flex-col items-center text-center cursor-pointer ${
-      comeDown ? "transform translate-y-3" : null
+      comeDown ? "lg:transform lg:translate-y-6" : null
     }`}
     whileHover={{ scale: 1.05, boxShadow: "0px 0px 8px rgb(79, 70, 229)" }}
     transition={{ duration: 0.3 }}
