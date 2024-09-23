@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -8,6 +9,7 @@ interface FeatureCardProps {
   hexagon: string;
   hexagon2: string;
   logo: string;
+  comeDown?: boolean;
 }
 
 const FeatureCard: React.FC<FeatureCardProps> = ({
@@ -16,13 +18,16 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   hexagon,
   hexagon2,
   logo,
+  comeDown,
 }) => (
   <motion.div
-    className="bg-card rounded-lg p-6 flex flex-col items-center text-center"
+    className={`relative bg-card w-270 h-224 rounded-lg mt-14 pt-14 px-10 pb-6 lg:p-4 lg:pt-6 flex flex-col items-center text-center cursor-pointer ${
+      comeDown ? "transform translate-y-3" : null
+    }`}
     whileHover={{ scale: 1.05, boxShadow: "0px 0px 8px rgb(79, 70, 229)" }}
     transition={{ duration: 0.3 }}
   >
-    <div className=" left-1/2 top-0 transform -translate-x-1/2 translate-y-1/2">
+    <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 w-144 h-144">
       <div className="relative">
         <Image
           src={hexagon}
@@ -31,12 +36,12 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
           height={144}
           className="object-cover"
         />
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute -top-5 inset-0 flex items-center justify-center">
           <Image
             src={hexagon2}
             alt="Small Hexagon"
-            width={115}
-            height={115}
+            width={80}
+            height={80}
             className="object-cover"
           />
           <div className="absolute inset-0 flex items-center justify-center">
@@ -45,7 +50,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
               alt="Logo"
               width={48}
               height={48}
-              className="object-cover"
+              className=" object-cover"
             />
           </div>
         </div>
@@ -55,3 +60,5 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
     <p className="text-indigo-200 text-sm">{description}</p>
   </motion.div>
 );
+
+export default FeatureCard;
