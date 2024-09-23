@@ -4,22 +4,49 @@ import Image from "next/image";
 import Button from "@/components/utilities/Button";
 import Title from "./utilities/Title";
 import { Play } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Hero: React.FC = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
   return (
     <section className="relative bg-background">
-      <div className="relative z-10">
+      <motion.div
+        className="relative z-10"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
         <div className="flex flex-col-reverse lg:flex-row lg:gap-14 items-center">
           <div className="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10 text-left">
             <Title>GAME DEVELOPMENT</Title>
-            <h1 className="text-[56px] sm:text-[56px] lg:text-[72px] leading-tight font-primary mb-6">
+            <motion.h1
+              variants={itemVariants}
+              className="text-[56px] sm:text-[56px] lg:text-[72px] leading-none font-primary mb-6"
+            >
               The Art Of Creating Games
-            </h1>
-            <p className="text-lg mb-8">
+            </motion.h1>
+            <motion.p className="text-lg mb-8" variants={itemVariants}>
               Game Development is the art of creating games and describes the
               design, development and release of a game.
-            </p>
-            <div className="flex space-x-6">
+            </motion.p>
+            <motion.div className="flex space-x-6" variants={itemVariants}>
               <Button className="!bg-[rgba(99, 87, 246, 1)] px-10 font-secondary">
                 PORTFOLIO
               </Button>
@@ -29,9 +56,9 @@ const Hero: React.FC = () => {
                 </Button>
                 <span className="text-gray-400 font-secondary">Play Video</span>
               </div>
-            </div>
+            </motion.div>
           </div>
-          <div className="lg:w-1/2">
+          <motion.div className="lg:w-1/2" variants={itemVariants}>
             <Image
               src="/assets/images/hero.svg"
               alt="Game development illustration"
@@ -39,9 +66,9 @@ const Hero: React.FC = () => {
               height={400}
               className="rounded-lg"
             />
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
       <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-10"></div>
     </section>
   );
