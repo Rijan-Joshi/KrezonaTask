@@ -1,23 +1,27 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Barlow, Barlow_Condensed } from "next/font/google";
 import "./globals.css";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import { cn } from "@/libs/utils";
 
 export const metadata: Metadata = {
   title: "GAM",
   description: "Your Gaming Platform",
 };
+
+// Fonts to use in the whole pages
+const barlow = Barlow({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+  variable: "--font-barlow",
+  display: "swap",
+});
+
+const barlowCondensed = Barlow_Condensed({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+  variable: "--font-barlow-condensed",
+  display: "swap",
+});
 
 export default function RootLayout({
   children,
@@ -27,7 +31,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={cn(
+          "min-h-screen antialiased",
+          barlow.variable,
+          barlowCondensed.variable
+        )}
       >
         {children}
       </body>
