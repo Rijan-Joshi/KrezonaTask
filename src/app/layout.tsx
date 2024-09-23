@@ -3,6 +3,8 @@ import { Barlow, Barlow_Condensed } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/libs/utils";
 import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "GAM",
@@ -32,15 +34,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <Head>
+        <title>GAM</title>
+        <meta name="description" content="Gaming Platform" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <body
         className={cn(
-          "min-h-screen antialiased",
+          "min-h-screen antialiased flex flex-col bg-background text-white",
           barlow.variable,
           barlowCondensed.variable
         )}
       >
         <NavBar />
-        {children}
+        <main className="flex-grow container mx-auto px-4 md:px-8 lg:px-12">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );

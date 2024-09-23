@@ -1,6 +1,6 @@
 const Home = () => {
   return (
-    <div className="text-5xl font-bold text-icon-primary-light text-center font-primary">
+    <div className="text-5xl mt-6 font-bold text-icon-primary-light text-center font-primary">
       GAM
     </div>
   );
