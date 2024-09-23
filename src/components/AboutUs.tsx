@@ -3,11 +3,13 @@ import React from "react";
 import Image from "next/image";
 import Button from "@/components/utilities/Button";
 import Title from "./utilities/Title";
-import { Play } from "lucide-react";
 import { motion } from "framer-motion";
 import Container from "./utilities/Container";
 
 const AboutUs: React.FC = () => {
+  // Variant for animation
+
+  //For Container
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -19,6 +21,7 @@ const AboutUs: React.FC = () => {
     },
   };
 
+  //For Items
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {

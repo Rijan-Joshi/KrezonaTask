@@ -6,7 +6,7 @@ interface TitleProps {
 
 const Title = ({ children }: TitleProps) => {
   return (
-    <span className="16px text-gray-400 font-secondary tracking-wide">
+    <span className="16px text-gray-400 font-secondary tracking-wide mb-2">
       {children}
     </span>
   );
