@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { theme } from "./theme/theme";
 
 const config: Config = {
   darkMode: 'selector',
@@ -8,16 +9,7 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-      },
-      fontFamily: {
-        barlow: ['var(--font-barlow)', 'sans-serif'],
-        barlowCondesed: ['var(--font-barlow-condensed)', 'sans-serif']
-      }
-    },
+    extend: theme
   },
   plugins: [],
 };
