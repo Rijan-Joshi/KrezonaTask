@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import Button from "@/components/utilities/Button";
 import Title from "./utilities/Title";
 import { motion } from "framer-motion";
 import Container from "./utilities/Container";
@@ -51,8 +50,8 @@ const OurServices: React.FC = () => {
                 className="text-lg mb-8 font-secondary"
                 variants={itemVariants}
               >
-                Video game developers take a designer's concepts and buld them
-                into a playable game for users.
+                Video game developers take a designer&apos;s concepts and buld
+                them into a playable game for users.
               </motion.p>
               <motion.div
                 className="flex flex-row space-x-5 items-center"
@@ -88,7 +87,7 @@ const OurServices: React.FC = () => {
                 <div className="flex flex-col gap-2 items-center">
                   <h3 className="font-primary text-[16px]">Video Game</h3>
                   <p className="font-secondary text-gray-500 text-[14px]">
-                    Designer's concepts
+                    Designer&apos;s concepts
                   </p>
                 </div>
               </motion.div>

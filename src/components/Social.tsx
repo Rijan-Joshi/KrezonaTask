@@ -1,8 +1,5 @@
 "use client";
 import React from "react";
-import Title from "./utilities/Title";
-import Image from "next/image";
-import CustomButton from "./utilities/Button";
 import Link from "next/link";
 import { Instagram, Twitter } from "lucide-react";
 import Container from "./utilities/Container";

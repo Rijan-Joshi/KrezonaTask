@@ -51,7 +51,7 @@ const AboutUs: React.FC = () => {
                 className="text-lg mb-8 font-secondary"
                 variants={itemVariants}
               >
-                Video game developers take a designer's concepts and buld them
+                Video game developers take a designer&apos;s concepts and buld them
                 into a playable game for users.
               </motion.p>
               <motion.p

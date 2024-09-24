@@ -63,8 +63,8 @@ const Reviews: React.FC = () => {
                 className="text-lg mb-8 font-secondary"
                 variants={itemVariants}
               >
-                Video game developers take a designer's concepts and buld them
-                into a playable game for users.
+                Video game developers take a designer&apos;s concepts and buld
+                them into a playable game for users.
               </motion.p>
               <div className="flex flex-row space-x-2 items-center">
                 <motion.div className="relative" variants={itemVariants}>

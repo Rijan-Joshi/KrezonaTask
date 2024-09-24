@@ -3,7 +3,6 @@ import React from "react";
 import { motion } from "framer-motion";
 
 interface FeatureCardProps {
-
   data: string;
   description: string;
   active: boolean;
