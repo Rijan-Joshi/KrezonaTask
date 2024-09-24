@@ -3,7 +3,6 @@ import React from "react";
 import Container from "./utilities/Container";
 import Section from "./utilities/Section";
 import Title from "./utilities/Title";
-import GameEventCard from "./gameEvents/gameEventCard";
 import Button from "@/components/utilities/Button";
 import BlogCard from "./blog/blogCard";
 

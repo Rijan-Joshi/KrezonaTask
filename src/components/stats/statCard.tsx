@@ -3,14 +3,13 @@ import React from "react";
 import { motion } from "framer-motion";
 
 interface FeatureCardProps {
-  id: number;
+
   data: string;
   description: string;
   active: boolean;
 }
 
 const statCard: React.FC<FeatureCardProps> = ({
-  id,
   data,
   description,
   active,
