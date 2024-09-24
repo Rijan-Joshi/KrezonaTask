@@ -47,7 +47,7 @@ const SomeNumbers = () => {
     <Container className="text-center">
       <Title>SOME NUMBERS</Title>
       <Section title="Games Have a Consistent Look">
-        <div className="flex flex-col lg:flex-row space-x-5">
+        <div className="flex flex-col items-center justify-center gap-3 lg:flex-row space-x-5">
           {stats.map((stat) => (
             <StatCard key={stat.id} {...stat} />
           ))}
