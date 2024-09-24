@@ -67,7 +67,7 @@ const Reviews: React.FC = () => {
                 them into a playable game for users.
               </motion.p>
               <div className="flex flex-row space-x-2 items-center">
-                <motion.div className="relative" variants={itemVariants}>
+                <motion.div variants={itemVariants}>
                   <Image
                     src="/assets/images/hexagon.svg"
                     alt="Big Hexagon"
@@ -77,7 +77,7 @@ const Reviews: React.FC = () => {
                     loading="lazy"
                   />
                 </motion.div>
-                <motion.div className="relative" variants={itemVariants}>
+                <motion.div variants={itemVariants}>
                   <Image
                     src="/assets/images/hexagon.svg"
                     alt="Big Hexagon"
@@ -87,7 +87,7 @@ const Reviews: React.FC = () => {
                     className="object-cover"
                   />
                 </motion.div>
-                <motion.div className="relative" variants={itemVariants}>
+                <motion.div variants={itemVariants}>
                   <Image
                     src="/assets/images/hexagon.svg"
                     alt="Big Hexagon"
