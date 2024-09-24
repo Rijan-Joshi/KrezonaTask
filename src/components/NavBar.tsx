@@ -23,7 +23,7 @@ const NavBar: React.FC = () => {
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-6 sm:px-12 md:px-20 lg:px-32">
-            <div className="flex items-center justify-between h-16 gap-32">
+            <div className="flex items-center justify-between h-16 gap-36">
               {/* Logo */}
               <div className="flex items-center">
                 <Link href="/" className="text-[40px] font-primary">

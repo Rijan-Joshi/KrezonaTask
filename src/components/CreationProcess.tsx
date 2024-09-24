@@ -34,14 +34,6 @@ const slides: SlideContent[] = [
 const CreationProcess: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
   return (
     <Container className="text-center">
       <Title>CREATION PROCESS</Title>
