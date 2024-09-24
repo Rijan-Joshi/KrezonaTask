@@ -64,6 +64,7 @@ const OurServices: React.FC = () => {
                     width={144}
                     height={144}
                     className="object-cover"
+                    loading = "lazy"
                   />
                   <div className="absolute -top-5 inset-0 flex items-center justify-center">
                     <Image
@@ -72,6 +73,7 @@ const OurServices: React.FC = () => {
                       width={80}
                       height={80}
                       className="object-cover"
+                      loading = "lazy"
                     />
                     <div className="absolute inset-0 flex items-center justify-center">
                       <Image
@@ -99,6 +101,7 @@ const OurServices: React.FC = () => {
                 width={600}
                 height={400}
                 className="rounded-lg"
+                loading = "lazy"
               />
             </motion.div>
           </div>

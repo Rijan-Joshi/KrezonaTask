@@ -21,6 +21,7 @@ const GameEventCard = ({ date, title, imageSrc }: GameCardProps) => (
       width={500}
       height={300}
       className="w-full h-80 object-cover"
+      loading="lazy"
     />
     <div className="p-8 text-left">
       <p className="text-indigo-300 font-secondary mb-2">{date}</p>
@@ -36,6 +37,7 @@ const GameEventCard = ({ date, title, imageSrc }: GameCardProps) => (
         alt="Download Button"
         width={48}
         height={48}
+        loading="lazy"
       />
     </motion.div>
   </motion.div>

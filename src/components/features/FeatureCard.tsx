@@ -35,6 +35,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
           width={144}
           height={144}
           className="object-cover"
+          loading="lazy"
         />
         <div className="absolute -top-5 inset-0 flex items-center justify-center">
           <Image
@@ -43,6 +44,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
             width={80}
             height={80}
             className="object-cover"
+            loading="lazy"
           />
           <div className="absolute inset-0 flex items-center justify-center">
             <Image
@@ -51,6 +53,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
               width={48}
               height={48}
               className=" object-cover"
+              loading="lazy"
             />
           </div>
         </div>

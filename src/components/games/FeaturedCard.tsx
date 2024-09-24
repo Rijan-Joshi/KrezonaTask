@@ -21,6 +21,7 @@ const FeaturedGameCard = ({ title, category, imageSrc }: GameCardProps) => (
       width={1000}
       height={600}
       className="w-full lg:h-3/4 object-cover"
+      loading="lazy"
     />
     <div className="p-8 text-left">
       <p className="text-indigo-300 font-secondary mb-2">{category}</p>

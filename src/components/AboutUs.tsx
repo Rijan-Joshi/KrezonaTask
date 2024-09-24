@@ -73,6 +73,7 @@ const AboutUs: React.FC = () => {
                 width={600}
                 height={400}
                 className="rounded-lg"
+                loading="lazy"
               />
             </motion.div>
           </div>

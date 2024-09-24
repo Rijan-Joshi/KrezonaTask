@@ -13,8 +13,14 @@ const AwardCard: React.FC<FeatureCardProps> = ({ imageUrl }) => (
     whileHover={{ scale: 1.05 }}
     transition={{ duration: 0.3 }}
   >
-    <Image src={imageUrl} alt="Awarder" width={112} height={25} />
+    <Image
+      src={imageUrl}
+      alt="Awarder"
+      width={112}
+      height={25}
+      loading="lazy"
+    />
   </motion.div>
 );
 
-export default AwardCard;
+export default React.memo(AwardCard);

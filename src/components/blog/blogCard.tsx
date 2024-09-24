@@ -14,6 +14,7 @@ const BlogCard = ({ date, title, imageSrc }: BLogProps) => (
     className="bg-card rounded-lg overflow-hidden cursor-pointer"
     whileHover={{ scale: 1.05 }}
     transition={{ duration: 0.2 }}
+    tabIndex={0}
   >
     <Image
       src={imageSrc}
@@ -21,6 +22,7 @@ const BlogCard = ({ date, title, imageSrc }: BLogProps) => (
       width={500}
       height={300}
       className="w-full h-80 object-cover"
+      loading="lazy"
     />
     <div className="p-8 text-left">
       <h3 className="text-[24px] font-primary text-white">{title}</h3>
@@ -29,4 +31,4 @@ const BlogCard = ({ date, title, imageSrc }: BLogProps) => (
   </motion.div>
 );
 
-export default BlogCard;
+export default React.memo(BlogCard);

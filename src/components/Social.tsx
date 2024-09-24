@@ -22,64 +22,64 @@ const services = [
 
 const Social = () => {
   return (
-    <Container>
-      <div className="w-full p-10 flex flex-col lg:flex-row lg:justify-evenly items-center text-center">
-        <div className="flex item">
-          <Link href="/" className="text-[40px] font-primary">
-            GAM
-          </Link>
-        </div>
+    <footer>
+      <Container>
+        <div className="w-full grid grid-cols-1 lg:grid-cols-4 gap-8 text-center items-center">
+          <div className="flex items-center justify-center text-center">
+            <Link href="/" className="text-[40px] font-primary text-center">
+              GAM
+            </Link>
+          </div>
 
-        <div className="flex flex-col items-center text-center">
-          <h2 className="text-indigo-300 font-primary text-[18px] pl-2">
-            Menu
-          </h2>
-          <div className="ml-10 flex flex-col items-center font-secondary">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-white-300 hover:bg-gray-700 text-[16] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                {item.name}
-              </Link>
-            ))}
+          <div className="flex flex-col items-center lg:items-start text-center">
+            <h2 className="text-indigo-300 font-primary text-lg mb-4">Menu</h2>
+            <nav className="flex flex-col items-center lg:items-start space-y-2">
+              {navigation.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="text-gray-300 hover:text-white transition-colors duration-300"
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </nav>
+          </div>
+
+          <div className="flex flex-col items-center lg:items-start text-center">
+            <h2 className="text-indigo-300 font-primary text-lg mb-4">
+              Services
+            </h2>
+            <nav className="flex flex-col items-center lg:items-start space-y-2">
+              {services.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="text-gray-300 hover:text-white transition-colors duration-300"
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </nav>
+          </div>
+
+          <div className="flex gap-2 items-center justify-center lg:items-start font-secondary text-center">
+            <Link
+              href="/"
+              className="text-white-300 w-10 h-10 flex place-items-center rounded-full bg-card text-[16] hover:text-white px-3 py-2 text-sm font-medium"
+            >
+              <Instagram />
+            </Link>
+            <Link
+              href="/"
+              className="text-white-300 w-10 h-10 flex place-items-center rounded-full bg-card text-[16] hover:text-white px-3 py-2 text-sm font-medium"
+            >
+              <Twitter />
+            </Link>
           </div>
         </div>
-
-        <div className="flex flex-col items-center">
-          <h2 className="text-indigo-300 font-primary text-[18px] pl-2">
-            Services
-          </h2>
-          <div className="ml-10 flex flex-col items-center font-secondary">
-            {services.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="text-white-300 hover:bg-gray-700 text-[16] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        <div className="ml-10 flex gap-2 items-start font-secondary">
-          <Link
-            href="/"
-            className="text-white-300 w-10 h-10 flex place-items-center rounded-full bg-card text-[16] hover:text-white px-3 py-2 text-sm font-medium"
-          >
-            <Instagram />
-          </Link>
-          <Link
-            href="/"
-            className="text-white-300 w-10 h-10 flex place-items-center rounded-full bg-card text-[16] hover:text-white px-3 py-2 text-sm font-medium"
-          >
-            <Twitter />
-          </Link>
-        </div>
-      </div>
-    </Container>
+      </Container>
+    </footer>
   );
 };
 

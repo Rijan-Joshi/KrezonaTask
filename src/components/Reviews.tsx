@@ -74,6 +74,7 @@ const Reviews: React.FC = () => {
                     width={144}
                     height={144}
                     className="object-cover"
+                    loading="lazy"
                   />
                 </motion.div>
                 <motion.div className="relative" variants={itemVariants}>
@@ -82,6 +83,7 @@ const Reviews: React.FC = () => {
                     alt="Big Hexagon"
                     width={115}
                     height={115}
+                    loading="lazy"
                     className="object-cover"
                   />
                 </motion.div>
@@ -92,6 +94,7 @@ const Reviews: React.FC = () => {
                     width={115}
                     height={115}
                     className="object-cover"
+                    loading="lazy"
                   />
                 </motion.div>
               </div>

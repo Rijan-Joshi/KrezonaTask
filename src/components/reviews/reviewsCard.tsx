@@ -21,6 +21,7 @@ const ReviewsCard = ({ description, name, remark }: ReviewsProps) => (
       width={160}
       height={32}
       className="ml-8"
+      loading="lazy"
     />
 
     <p className="font-secondary text-white text-[14px] mt-2">{description}</p>
@@ -34,6 +35,7 @@ const ReviewsCard = ({ description, name, remark }: ReviewsProps) => (
         alt="Star Ratings"
         width={160}
         height={32}
+        loading="lazy"
       />
     </div>
   </motion.div>

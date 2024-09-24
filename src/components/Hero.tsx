@@ -65,6 +65,7 @@ const Hero: React.FC = () => {
               width={600}
               height={400}
               className="rounded-lg"
+              priority
             />
           </motion.div>
         </div>
