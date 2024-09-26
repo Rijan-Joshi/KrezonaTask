@@ -40,7 +40,7 @@ const Blog = () => {
           ))}
         </div>
         <div className="text-center mt-12">
-          <Button className="pd-10">ALL EVENTS</Button>
+          <Button className="px-12">ALL EVENTS</Button>
         </div>
       </Section>
     </Container>

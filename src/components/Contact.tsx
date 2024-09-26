@@ -19,7 +19,10 @@ const Contact = () => {
             Game Development is the art of creaing games and describes
           </p>
         </div>
-        <CustomButton className="bg-icon-primary-light h-min z-40">
+        <CustomButton
+          className="bg-icon-primary-light h-min z-40 border-none"
+          primary={true}
+        >
           {" "}
           CONTACT US
         </CustomButton>

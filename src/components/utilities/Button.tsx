@@ -27,9 +27,10 @@ const CustomButton: React.FC<ButtonProps> = ({
     large: "px-6 py-3 text-lg",
   };
 
-  const colorClasses = primary
-    ? `bg-button-primary-${theme} hover:bg-opacity-0.4 text-white focus:ring-primary`
-    : "bg-transparent border-2 border-gray-700 font-primary text-white hover:bg-primary hover:text-white focus:ring-primary";
+  const colorClasses =
+    primary === true
+      ? `bg-button-primary-${theme} hover:bg-opacity-0.4 text-white focus:ring-primary`
+      : "bg-transparent border-2 border-gray-700 font-primary text-white hover:bg-primary hover:text-white focus:ring-primary";
 
   return (
     <motion.button
