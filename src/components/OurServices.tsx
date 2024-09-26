@@ -57,7 +57,13 @@ const OurServices: React.FC = () => {
                 className="flex flex-row space-x-5 items-center"
                 variants={itemVariants}
               >
-                <div className="relative">
+                <motion.div
+                  className="relative cursor-pointer"
+                  whileHover={{
+                    scale: 1.1,
+                  }}
+                  transition={{ duration: 0.3 }}
+                >
                   <Image
                     src="/assets/images/hexagon.svg"
                     alt="Big Hexagon"
@@ -85,7 +91,7 @@ const OurServices: React.FC = () => {
                       />
                     </div>
                   </div>
-                </div>
+                </motion.div>
                 <div className="flex flex-col gap-2 items-center">
                   <h3 className="font-primary text-[16px]">Video Game</h3>
                   <p className="font-secondary text-gray-500 text-[14px]">
