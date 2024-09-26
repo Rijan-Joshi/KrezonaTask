@@ -39,7 +39,7 @@ const OurServices: React.FC = () => {
         >
           <div className="flex flex-col-reverse lg:flex-row-reverse lg:gap-14 items-center">
             <div className="lg:w-1/2 mb-10 lg:mb-0 lg:pl-8 text-left">
-              <Title>ABOUT US</Title>
+              <Title>OUR SERVICES</Title>
               <motion.h1
                 variants={itemVariants}
                 className="text-[40px] sm:text-[40px] lg:text-[56px] leading-none font-primary mb-6"
@@ -64,7 +64,7 @@ const OurServices: React.FC = () => {
                     width={144}
                     height={144}
                     className="object-cover"
-                    loading = "lazy"
+                    loading="lazy"
                   />
                   <div className="absolute -top-5 inset-0 flex items-center justify-center">
                     <Image
@@ -73,7 +73,7 @@ const OurServices: React.FC = () => {
                       width={80}
                       height={80}
                       className="object-cover"
-                      loading = "lazy"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 flex items-center justify-center">
                       <Image
@@ -81,7 +81,7 @@ const OurServices: React.FC = () => {
                         alt="Logo"
                         width={48}
                         height={48}
-                        className=" object-cover"
+                        className="object-cover"
                       />
                     </div>
                   </div>
@@ -101,7 +101,7 @@ const OurServices: React.FC = () => {
                 width={600}
                 height={400}
                 className="rounded-lg"
-                loading = "lazy"
+                loading="lazy"
               />
             </motion.div>
           </div>

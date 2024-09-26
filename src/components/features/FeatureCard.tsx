@@ -21,13 +21,13 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   comeDown,
 }) => (
   <motion.div
-    className={`relative bg-card w-270 h-224 rounded-lg mt-14 pt-14 px-10 pb-6 lg:p-4 lg:pt-6 flex flex-col items-center text-center cursor-pointer ${
-      comeDown ? "lg:transform lg:translate-y-6" : null
-    }`}
+    className={`relative bg-card rounded-lg mt-14 pt-14 px-6 pb-6 lg:p-4 lg:pt-10 flex flex-col items-center text-center cursor-pointer`}
+    initial={{ y: comeDown ? 24 : 0 }}
+    animate={{ y: comeDown ? 24 : 0 }}
     whileHover={{ scale: 1.05, boxShadow: "0px 0px 8px rgb(79, 70, 229)" }}
     transition={{ duration: 0.3 }}
   >
-    <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 w-144 h-144">
+    <div className="absolute inset-0 -top-full flex items-center justify-center w-144 h-144">
       <div className="relative">
         <Image
           src={hexagon}
@@ -52,8 +52,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
               alt="Logo"
               width={48}
               height={48}
-              className=" object-cover"
-              loading="lazy"
+              className="object-cover"
             />
           </div>
         </div>

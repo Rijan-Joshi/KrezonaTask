@@ -76,7 +76,7 @@ const CreationProcess: React.FC = () => {
                 <div className="text-lg text-gray-700 mb-3">
                   {slides[currentSlide].id}
                 </div>
-                <h3 className="text-[40px] md:text-[56px] font-primary mb-3 text-black">
+                <h3 className="text-[40px] md:text-[56px] max-w-full font-primary mb-3 text-black">
                   {slides[currentSlide].title}
                 </h3>
                 <p className="text-sm text-gray-600">
